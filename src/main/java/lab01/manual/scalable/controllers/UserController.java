@@ -28,6 +28,10 @@ public class UserController {
     public String testUserController() {
         return "Hello from user Controller!";
     }
+    @GetMapping("/me")
+    public User dummy(){
+        return new User("ali",25,"ali@ali.com");
+    }
 
     @GetMapping
     public List<User> getAllUsers() {
